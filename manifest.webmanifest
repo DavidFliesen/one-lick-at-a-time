@@ -1,0 +1,17 @@
+{
+  "name": "One Lick at a Time",
+  "short_name": "One Lick",
+  "description": "Learn lead guitar one lick at a time — explore riffs across genres, hear them, see the tab, and build real playing skill.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#130A16",
+  "theme_color": "#130A16",
+  "categories": ["music", "education", "entertainment"],
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

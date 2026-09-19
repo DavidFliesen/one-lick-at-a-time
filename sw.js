@@ -1,5 +1,5 @@
 /* One Lick at a Time — service worker (cache-first app shell) */
-const CACHE = "olat-v1.0.0";
+const CACHE = "olat-v1.1.0";
 
 const ASSETS = [
   "./",

@@ -25,7 +25,7 @@ Then share what you're working on — X, Facebook, Reddit, WhatsApp, Telegram, n
 ## Features
 
 - **16 original teaching licks** across Blues, Rock, Metal, Country, Funk, Surf, Jazz, Folk, Shred, Reggae, Pop, Rockabilly, Ambient and more.
-- **Built-in string synth** (Karplus–Strong) — no audio samples, no soundfonts, fully offline. Bends, slides, vibrato and palm-mutes are modeled in the Web Audio graph.
+- **Amp & pedalboard sound engine** — a Karplus–Strong string runs into a modeled signal chain: a tube-style overdrive (soft-clip waveshaper with 4× oversampling), a two-stage speaker-cabinet filter with a presence peak, a bass/mid/treble tone stack, a glue compressor, and a pedalboard of tape-style delay (filtered feedback), chorus, and reverb. Tone follows the genre automatically — **clean** for jazz/folk/ambient/pop/funk, **crunch** for blues/rock/country/surf, **high-gain** for metal/shred. No samples, no soundfonts, no impulse files — it's all generated in the Web Audio graph, fully offline. Bends, slides, vibrato and palm-mutes are modeled per note.
 - **Interactive tablature** with a moving playhead and an adjustable tempo (50–130%).
 - **Genre & difficulty filters**, Prev/Next deck navigation, **Surprise me** (shuffle), and a deterministic **Lick of the day**.
 - **Progress tracking** (explored + learned) saved to `localStorage`.
@@ -164,7 +164,7 @@ That keeps everything you ship either **original** or **properly licensed**, wit
 ## Tech notes
 
 - Vanilla JS, no framework, no build required (the inliner is optional).
-- Web Audio API for synthesis; `localStorage` for progress; a cache-first service worker for offline.
+- Web Audio API for synthesis and the amp/pedalboard chain (drive curve, cabinet, delay, chorus and reverb are all generated — no external audio assets); `localStorage` for progress; a cache-first service worker for offline.
 - Fonts (Anton, Sora, Roboto Mono) are self-hosted under `assets/fonts/` so nothing is fetched from a CDN — it works fully offline.
 
 Made for players who want to **lead**. Practice a little every day. ⚡

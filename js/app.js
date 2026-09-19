@@ -133,6 +133,7 @@
   function schedule(){
     stop(true);
     const l=currentLick();
+    if(engine.setAmp && typeof OLAT_ampForGenre==="function") engine.setAmp(OLAT_ampForGenre(l.genre));
     const bpm=l.bpm*state.mult, spb=60/bpm;
     const t0=engine.ctx.currentTime+0.09;
     let beat=0, prevFreq=null; const times=[];
